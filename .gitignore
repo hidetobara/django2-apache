@@ -1,0 +1,6 @@
+www/django_demo_app
+db/
+
+.idea
+.pyc
+**/__pycache__

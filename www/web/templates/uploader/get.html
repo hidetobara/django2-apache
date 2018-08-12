@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Uploader</title>
+    {% include 'common/header.html' %}
+</head>
+<body>
+    <div class="container">
+
+        <div class="panel panel-default col-sm-3">
+            <img class="img-responsive" src="{% static 'img/atama.png' %}" />
+
+            <form action="/uploader/" method="post">
+                {% csrf_token %}
+                <input type="hidden" name="process" value="information" />
+                Name: <input class="form-control" type="text" name="name" />
+                Value: <input class="form-control" type="text" name="value" />
+                <button class="btn btn-default" type="submit">Commit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
