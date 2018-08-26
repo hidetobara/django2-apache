@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.views import View
 
 # Create your views here.
-class UploaderView(View):
+class SandboxView(View):
     def get(self, request, *args, **kwargs):
         return render(request, "sandbox/get.html", {})
 
@@ -11,4 +11,4 @@ class UploaderView(View):
         value = request.POST.get('value')
         return render(request, "sandbox/post.html", {'name': name, 'value': value})
 
-uploader = UploaderView.as_view()
+index = SandboxView.as_view()

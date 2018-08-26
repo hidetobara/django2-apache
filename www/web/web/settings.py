@@ -55,7 +55,7 @@ ROOT_URLCONF = 'web.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': [os.path.join(BASE_DIR, "templates")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -78,9 +78,9 @@ pymysql.install_as_MySQLdb()
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'famtory', # DB名を設定
-        'USER': 'famtory', # DBへ接続するユーザIDを設定
-        'PASSWORD': 'famtory', # DBへ接続するユーザIDのパスワードを設定
+        'NAME': 'hoge', # DB名を設定
+        'USER': 'hoge', # DBへ接続するユーザIDを設定
+        'PASSWORD': 'hoge', # DBへ接続するユーザIDのパスワードを設定
         'HOST': 'db',
         'PORT': '3306',
         'OPTIONS': {

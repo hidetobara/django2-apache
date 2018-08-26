@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class UploaderConfig(AppConfig):
+class SandboxConfig(AppConfig):
     name = 'sandbox'

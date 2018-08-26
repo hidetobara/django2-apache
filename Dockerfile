@@ -8,5 +8,5 @@ RUN ln /usr/bin/pip3 /usr/bin/pip
 RUN pip install --upgrade pip
 RUN pip install django ptvsd PyMySQL
 ADD ./web.conf /etc/apache2/sites-available/000-default.conf
-EXPOSE 80 3500 8080
+EXPOSE 80 8080
 CMD ["apache2ctl", "-D", "FOREGROUND"]

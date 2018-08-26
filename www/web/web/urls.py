@@ -19,7 +19,7 @@ from . import views
 
 urlpatterns = [
     path('', views.hello),
-    path('uploader/', include('uploader.urls')),
+    path('sandbox/', include('sandbox.urls')),
     path('detail/<int:question_id>', views.detail),
     path('admin/', admin.site.urls),
 ]
